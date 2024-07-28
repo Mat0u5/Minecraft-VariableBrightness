@@ -1,32 +1,32 @@
 {
 	"schemaVersion": 1,
-	"id": "serverresourcepackreload",
+	"id": "variablebrightness",
 	"version": "${version}",
-	"name": "Minecraft server resourcepack reload",
-	"description": "This mod reloads server resourcepack without the need to restart the entire server!",
+	"name": "Variable Brightness",
+	"description": "A mod for modifying your brightness based on where you are in the world!",
 	"authors": [
 		"Mat0u5"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/Mat0u5/Minecraft-server.properties-reload"
+		"sources": "https://github.com/Mat0u5/Minecraft-VariableBrightness"
 	},
 	"license": "MIT",
-	"icon": "assets/serverresourcepackreload/icon.png",
+	"icon": "assets/variablebrightness/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"net.mat0u5.serverresourcepackreload.Main"
+			"net.mat0u5.variablebrightness.Main"
 		],
 		"client": [
-			"net.mat0u5.serverresourcepackreload.MainClient"
+			"net.mat0u5.variablebrightness.MainClient"
 		],
 		"fabric-datagen": [
-			"net.mat0u5.serverresourcepackreload.MainDataGenerator"
+			"net.mat0u5.variablebrightness.MainDataGenerator"
 		]
 	},
 	"mixins": [
-		"serverresourcepackreload.mixins.json"
+		"variablebrightness.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.14.21",

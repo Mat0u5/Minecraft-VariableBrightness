@@ -1,6 +1,4 @@
-package net.mat0u5.serverresourcepackreload.config;
-
-import net.mat0u5.serverresourcepackreload.Main;
+package net.mat0u5.variablebrightness.config;
 
 import java.io.File;
 import java.io.FileInputStream;

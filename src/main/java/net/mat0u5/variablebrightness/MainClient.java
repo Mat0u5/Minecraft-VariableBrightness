@@ -1,4 +1,4 @@
-package net.mat0u5.serverresourcepackreload;
+package net.mat0u5.variablebrightness;
 
 import net.fabricmc.api.ClientModInitializer;
 
