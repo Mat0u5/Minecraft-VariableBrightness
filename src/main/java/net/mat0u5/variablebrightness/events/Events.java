@@ -4,6 +4,7 @@ package net.mat0u5.variablebrightness.events;
 
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.minecraft.client.MinecraftClient;
+import net.minecraft.entity.Entity;
 import net.minecraft.util.math.BlockPos;
 
 import java.util.*;
@@ -37,6 +38,12 @@ public class Events {
         current_delay = 0;
         if (client.player == null) return;
         BlockPos playerPos = client.player.getBlockPos();
+        if (client.player.isSpectator()) {
+            Entity spectatedEntity = client.getCameraEntity();
+            if (spectatedEntity != null) {
+                playerPos = spectatedEntity.getBlockPos();
+            }
+        }
         Integer brightness = getBrightnessForPosition(playerPos);
         if (brightness != null) {
             startGammaTransition(brightness / 100.0);
